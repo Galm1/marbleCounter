@@ -1,18 +1,19 @@
 package com.company;
 
-public static void main(String[] args){
+public class main {
+    public static void main(String[] args) {
 
-        MarbleBag marbleBag=new MarbleBag(3,1,2);
+        MarbleBag marbleBag = new MarbleBag(3, 1, 2);
 
         marbleBag.printInfo();
 
-        marbleBag.numBlueMarbles=5;
+        marbleBag.blue = 5;
 
 
-        if(marbleBag.getTotalNumberOfMarbles()==9){
+        if (marbleBag.getTotalNumberOfMarbles() == 9) {
 
             System.out.println("Total is 9, as expected");
-        }else{
+        } else {
 
             System.out.println("PANIC!!!");
 
@@ -22,15 +23,16 @@ public static void main(String[] args){
 
         marbleBag.removeAllGreenMarbles();
 
-        if(marbleBag.getTotalNumberOfMarbles()==8){
+        if (marbleBag.getTotalNumberOfMarbles() == 8) {
 
             System.out.println("Total is 8, as expected");
-        }else{
+        } else {
 
             System.out.println("Panic even more!!!");
 
             throw new AssertionError();
 
         }
+    }
 }
 
